@@ -335,9 +335,6 @@ ul {
   min-height: 100vh;
   display: flex;
   color: var(--text-black-900);
-  background-image: url("../images/소개 이미지/KakaoTalk_20251028_003810326.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .home .home-info {
@@ -831,9 +828,7 @@ h3.my-profession {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .home .home-img {
-    display: none;
-  }
+
 }
 
 @media (max-width: 767px) {
