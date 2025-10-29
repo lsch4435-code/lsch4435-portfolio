@@ -54,9 +54,18 @@ function showSection(element) {
   for (let i = 0; i < totalSection; i++)
   {
     allSection[i].classList.remove("active");
+    allSection[i].classList.add("hidden"); // Add this line to hide non-active sections
   }
   const target = element.getAttribute("href").split("#")[1];
+  document.querySelector("#" + target).classList.remove("hidden"); // Remove hidden from target
   document.querySelector("#" + target).classList.add("active")
+}
+
+function removeBackSection() {
+  for (let i = 0; i < totalSection; i++) {
+    allSection[i].classList.remove("back-section");
+    // No need to remove 'hidden' here, as showSection will handle it
+  }
 }
 
 function updateNav(element) {
