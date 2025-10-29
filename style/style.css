@@ -59,29 +59,14 @@ ul {
 .section {
   background: var(--bg-black-900);
   min-height: 100vh;
-  display: block;
-  padding: 0 30px;
-  opacity: 1;
-  position:fixed;
-  left: 270px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
-
-.section.back-section {
-  z-index: 3;
+  display: none; /* Add this to hide by default */
 }
 
 .section.active {
   z-index: 4;
   opacity: 1;
   animation: slideSection 1s ease;
+  display: block; /* Add this to show when active */
 }
 
 @keyframes slideSection {

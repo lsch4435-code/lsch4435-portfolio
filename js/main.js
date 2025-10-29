@@ -16,9 +16,6 @@ const nav = document.querySelector(".nav"),
   allSection = document.querySelectorAll(".section"),
   totalSection = allSection.length;
 
-console.log("All Sections:", allSection); // Add this
-console.log("Total Sections:", totalSection); // Add this
-
   for (let i = 0; i < totalNavList; i++) {
     const a = navList[i].querySelector("a");
     
