@@ -160,6 +160,9 @@ function portfolioItemDetails(portfolioItem) {
 window.onload = function () {
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
+    const submitButton = document.getElementById('form-submit');
+    submitButton.disabled = true; // Disable button to prevent multiple submissions
+
     // generate a five digit number for the contact_number variable
     this.contact_number.value = Math.random() * 100000 | 0;
     // these IDs from the previous steps
@@ -168,8 +171,13 @@ window.onload = function () {
         console.log('SUCCESS!');
         alert('전송이 완료되었습니다');
         location.reload();
-      }, function (error) {
+      })
+      .catch(function (error) {
         console.log('FAILED...', error);
+        alert('전송에 실패했습니다: ' + error.text); // Provide feedback on failure
+      })
+      .finally(function() {
+        submitButton.disabled = false; // Re-enable button
       });
   });
 }
