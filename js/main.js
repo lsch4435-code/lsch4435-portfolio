@@ -80,7 +80,7 @@ function updateNav(element) {
 }
 
 // Hire Button
-document.querySelector(".hire-me").addEventListener("click", function ()
+/* document.querySelector(".hire-me").addEventListener("click", function ()
 {
   const sectionIndex = this.getAttribute("data-section-index");
   console.log(this)
@@ -88,7 +88,7 @@ document.querySelector(".hire-me").addEventListener("click", function ()
   updateNav(this);
   removeBackSection();
   addBackSection(sectionIndex);
-})
+}) */
 
 
 // Nav Toggler Button
