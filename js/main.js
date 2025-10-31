@@ -18,25 +18,27 @@ const nav = document.querySelector(".nav"),
 
   for (let i = 0; i < totalNavList; i++) {
     const a = navList[i].querySelector("a");
-    
-    a.addEventListener("click", function() {
-      removeBackSection();
-      
-      for (let j = 0; j < totalNavList; j++) {
-        if (navList[j].querySelector("a").classList.contains("active")) {
-          addBackSection(j);
-          console.log(totalNavList);
-          console.log(j);
-          }        
-        navList[j].querySelector("a").classList.remove("active")
-      }
 
-      this.classList.add("active")
-      showSection(this);
-      if (window.innerWidth < 1200) {
-        asideSectionTogglerBtn();
+    a.addEventListener("click", function(event) {
+      const href = this.getAttribute("href");
+      if (href.startsWith("#")) {
+        event.preventDefault();
+        removeBackSection();
+
+        for (let j = 0; j < totalNavList; j++) {
+          if (navList[j].querySelector("a").classList.contains("active")) {
+            addBackSection(j);
+          }
+          navList[j].querySelector("a").classList.remove("active");
         }
-    })
+
+        this.classList.add("active");
+        showSection(this);
+        if (window.innerWidth < 1200) {
+          asideSectionTogglerBtn();
+        }
+      }
+    });
   }
 
 
