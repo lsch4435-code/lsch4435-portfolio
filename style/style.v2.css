@@ -37,7 +37,6 @@ body {
   line-height: 1.5;
   font-size: 1.6rem;
   font-family: 'Poppins', 'Noto Sans KR', sans-serif;
-  background: red !important;
 }
 
 * { 
@@ -177,7 +176,7 @@ ul {
   background: var(--bg-black-100);
   position: fixed;
   top: 0;
-  left: 0;
+  left: -270px;
   padding: 30px;
   height: 100vh;
   border-right: 1px solid var(--bg-black-50);
@@ -1172,3 +1171,9 @@ h3.my-profession {
   url(../font/TmoneyRoundWind-ExtraBoldA1.ttf) format("fft"); 
   font-display: swap
 }
+@media (min-width: 1200px) {
+  .aside {
+    left: 0;
+  }
+}
+
