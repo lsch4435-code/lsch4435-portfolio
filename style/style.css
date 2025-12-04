@@ -201,10 +201,9 @@ ul {
 }
 
 .aside .logo {
-  position: absolute;
-  top: 50px;
-  font-size: 3rem;
+  font-size: 2.6rem;         /* 살짝 줄였고, 원하면 3rem 유지해도 돼 */
   text-transform: capitalize;
+  padding: 30px 0;  
 }
 
 .aside .logo a {
@@ -299,7 +298,7 @@ ul {
   top: 0;
 }
 .aside .nav {
-  margin-top: 50px;
+  margin-top: 20px;  /* 10~30px 사이에서 마음에 드는 값으로 조절해봐 */
 }
 
 .aside .nav li {
@@ -1182,4 +1181,30 @@ h3.my-profession {
   url(../font/TmoneyRoundWind-ExtraBoldA1.woff) format("woff"), 
   url(../font/TmoneyRoundWind-ExtraBoldA1.ttf) format("fft"); 
   font-display: swap
+
 }
+/* ===== Custom: 이정진 포트폴리오 로고 / 메뉴 겹침 수정 ===== */
+
+/* 로고 글자 줄이기 + 줄 간격 조정 */
+.aside .logo a {
+  display: block;
+  font-size: 22px;      /* 기존보다 조금 작게 */
+  line-height: 1.3;     /* 줄 간격 살짝 띄우기 */
+}
+
+/* 데스크탑에서만 메뉴를 좀 더 아래로 내리기 */
+@media (min-width: 992px) {
+  .aside .nav {
+    margin-top: 80px;   /* 필요하면 70~100 사이로 조절해봐도 됨 */
+  }
+}
+
+/* 사이드바 메뉴(Home~Contact)에서는 ㄴㄱ 모양(코너 장식) 숨기기 */
+.aside .nav li a::before,
+.aside .nav li a::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+
