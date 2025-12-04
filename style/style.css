@@ -201,10 +201,9 @@ ul {
 }
 
 .aside .logo {
-  position: absolute;
-  top: 50px;
-  font-size: 3rem;
+  font-size: 2.6rem;         /* 살짝 줄였고, 원하면 3rem 유지해도 돼 */
   text-transform: capitalize;
+  padding: 30px 0;  
 }
 
 .aside .logo a {
@@ -299,7 +298,7 @@ ul {
   top: 0;
 }
 .aside .nav {
-  margin-top: 50px;
+  margin-top: 20px;  /* 10~30px 사이에서 마음에 드는 값으로 조절해봐 */
 }
 
 .aside .nav li {
@@ -1199,3 +1198,4 @@ h3.my-profession {
     margin-top: 80px;   /* 필요하면 70~100 사이로 조절해봐도 됨 */
   }
 }
+
