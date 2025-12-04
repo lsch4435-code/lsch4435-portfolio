@@ -1199,3 +1199,12 @@ h3.my-profession {
   }
 }
 
+/* 사이드바 메뉴(Home~Contact)에서는 ㄴㄱ 모양(코너 장식) 숨기기 */
+.aside .nav li a::before,
+.aside .nav li a::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+
