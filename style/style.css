@@ -1182,4 +1182,20 @@ h3.my-profession {
   url(../font/TmoneyRoundWind-ExtraBoldA1.woff) format("woff"), 
   url(../font/TmoneyRoundWind-ExtraBoldA1.ttf) format("fft"); 
   font-display: swap
+
+}
+/* ===== Custom: 이정진 포트폴리오 로고 / 메뉴 겹침 수정 ===== */
+
+/* 로고 글자 줄이기 + 줄 간격 조정 */
+.aside .logo a {
+  display: block;
+  font-size: 22px;      /* 기존보다 조금 작게 */
+  line-height: 1.3;     /* 줄 간격 살짝 띄우기 */
+}
+
+/* 데스크탑에서만 메뉴를 좀 더 아래로 내리기 */
+@media (min-width: 992px) {
+  .aside .nav {
+    margin-top: 80px;   /* 필요하면 70~100 사이로 조절해봐도 됨 */
+  }
 }
